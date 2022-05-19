@@ -1,0 +1,53 @@
+{
+    "name": "user",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@babel/core": "^7.17.12",
+        "@babel/plugin-transform-runtime": "^7.17.12",
+        "@babel/preset-env": "^7.17.12",
+        "@babel/preset-react": "^7.17.12",
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^13.2.0",
+        "@testing-library/user-event": "^13.5.0",
+        "axios": "^0.27.2",
+        "babel-loader": "^8.2.5",
+        "css-loader": "^6.7.1",
+        "html-webpack-plugin": "^5.5.0",
+        "postcss-loader": "^6.2.1",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "react-router-dom": "^6.3.0",
+        "react-scripts": "5.0.1",
+        "style-loader": "^3.3.1",
+        "web-vitals": "^2.1.4",
+        "webpack": "^5.72.1",
+        "webpack-cli": "^4.9.2",
+        "webpack-dev-server": "^4.9.0",
+        "zustand": "^4.0.0-rc.1"
+    },
+    "scripts": {
+        "build": "webpack --config webpack.config.js",
+        "start": "webpack serve --open --config webpack.config.js",
+        "build:start": "cd dist && PORT=3002 npx serve",
+        "start:live": "webpack serve --open --mode development --live-reload --hot"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
