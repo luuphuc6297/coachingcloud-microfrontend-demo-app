@@ -49,7 +49,7 @@ module.exports = {
             name: 'product',
             filename: 'remoteEntry.js',
             remotes: {
-                shell: 'home@http://localhost:3000/remoteEntry.js',
+                shell: 'shell@http://localhost:3000/remoteEntry.js',
                 product: 'product@http://localhost:3001/remoteEntry.js',
                 user: 'user@http://localhost:3002/remoteEntry.js',
             },
