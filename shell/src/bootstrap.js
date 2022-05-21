@@ -2,19 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ZustandProvider from './store/zustandProvider';
+import { createStore, Provider } from 'shell/zustand';
 import { history } from './utils/history';
 import CustomRouter from './utils/router';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <ZustandProvider>
+        <Provider createStore={createStore}>
             <CustomRouter history={history}>
                 <App />
             </CustomRouter>
-        </ZustandProvider>
+        </Provider>
     </React.StrictMode>
 );
 

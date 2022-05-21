@@ -42,7 +42,6 @@ module.exports = {
             },
         ],
     },
-
     plugins: [
         new ModuleFederationPlugin({
             name: 'shell',
@@ -54,6 +53,7 @@ module.exports = {
             },
             exposes: {
                 './App': './src/App',
+                './zustand': './src/store/ZustandStore',
             },
             shared: {
                 ...deps,

@@ -1,6 +1,9 @@
 import create from 'zustand';
+import createContext from 'zustand/context';
 import { devtools, persist } from 'zustand/middleware';
 import { userApis } from '../apis/userApis';
+
+const { Provider, useStore } = createContext();
 
 const createStore = () =>
     create(
@@ -22,4 +25,4 @@ const createStore = () =>
         )
     );
 
-export default createStore;
+export { Provider, createStore, useStore };

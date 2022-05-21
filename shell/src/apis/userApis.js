@@ -1,7 +1,7 @@
 import axiosClient from './axiosClient';
 
-export const userApi = {
-    getUsers(data): Promise {
+export const userApis = {
+    getUsers(data) {
         const url = '/users';
         return axiosClient.get(url);
     },
